@@ -46,11 +46,11 @@ class ChatBot:
     def submit(self):
         submit_image = PhotoImage(file=r"send.gif")
         submit = Button(self.master,
-                            text="Send",
-                            width=20,
-                            bg="#2A4B7C",
-                            fg='#ffffff',
-                            font = ("Helvetica", 13), command=self.communicate)
+                        text="Send",
+                        width=20,
+                        bg="#2A4B7C",
+                        fg='#ffffff',
+                        font=("Helvetica", 13), command=self.communicate)
         submit.pack(side=RIGHT, ipady=20)
 
     def final_call(self):
