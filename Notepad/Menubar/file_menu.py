@@ -20,7 +20,7 @@ class FileMenu:
         """
         def file_save():
             """
-            If file is new then it will as for saving(nothing but save as)
+            If file is new then it will ask for saving(act as saveas function)
             If you just opened a file then it wouldn't say anything. Just saves the content
             """
             if self.file_name:
@@ -58,6 +58,9 @@ class FileMenu:
             f_save.close()
 
         def open_file():
+            """
+            Function to open a file
+            """
             o_file = filedialog.askopenfile(mode='r', filetypes=self.file_type)
             if o_file is not None:
                 self.file_name = o_file.name
