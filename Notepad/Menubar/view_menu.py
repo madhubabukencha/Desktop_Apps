@@ -15,9 +15,12 @@ class ViewMenu:
         """
         Help to set theme and font style
         """
+        # Default font type
         final_font_type = "DejaVuSansMono"
         font_sizes = [8, 9, 10, 11, 12, 14, 16, 18, 20, 24, 28, 36, 48, 72]
-        final_font_size = 8
+        # Default font size
+        final_font_size = 14
+        self.text['font'] = (final_font_type, str(final_font_size))
 
         def fg_color():
             """

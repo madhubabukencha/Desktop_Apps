@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     # Menu bar
     my_menu_bar = MenuBar(root, text_area)
+    # Above Menubar class contains below sub menus
     my_menu_bar.file_menu_bar()
     my_menu_bar.edit_menu_bar()
     my_menu_bar.view_menu_bar()
