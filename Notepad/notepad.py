@@ -1,11 +1,14 @@
 from tkinter import *
-from Notepad.Menubar.menubar import MenuBar
+from Menubar.menubar import MenuBar
 from tkinter import Scrollbar
 
 
 if __name__ == "__main__":
     root = Tk()
     root.title("Notepad")
+    
+    photo_image = PhotoImage(file='valmiki.png')
+    root.iconphoto(False, photo_image)
 
     # geometry("window width x window height + position right + position down")
     root.geometry("900x570+270+30")

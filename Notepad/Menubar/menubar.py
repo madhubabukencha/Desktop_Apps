@@ -1,9 +1,9 @@
 from tkinter import *
 from tkinter.colorchooser import askcolor
 # Remember if you keep . to import a package you might get relative path related error
-from Notepad.Menubar import file_menu
-from Notepad.Menubar import edit_menu
-from Notepad.Menubar import view_menu
+from Menubar import file_menu
+from Menubar import edit_menu
+from Menubar import view_menu
 
 
 class MenuBar:
