@@ -1,2 +1,2 @@
-# kencha_projects
-An area where you find all Madhu Babu Kencha's Desktop projects
+# Desktop_Apps
+<p> <strong>Desktop_Apps</strong>, it is a public repository. It contains platform independent desktop applications. As these applications completely developed using python's inbuild library called <strong>tkinter</strong> you no need to install any other modules to use these applications. If there is any need of 3rd party libraries then I will mention them in Application's </strong>REAME.md</strong> file</p>
