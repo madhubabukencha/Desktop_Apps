@@ -12,7 +12,7 @@ class FileMenu:
         self.menu_bar = menu_bar_obj
         self.file_name = ""
         self.file_type = [('Python Files', '*.py'),
-                     ('Text Document', '*.txt')]
+                          ('Text Document', '*.txt')]
 
     def root_file_menu(self):
         """
@@ -20,9 +20,10 @@ class FileMenu:
         """
         def file_save():
             """
-            If file is new then it will ask for saving(act as saveas function)
-            If you just opened a file then it wouldn't say anything. Just saves the content
+            If file is new then it will ask for saving(act as 'save as' function)
+            If you just opened a file then it wouldn't say anything. It just saves the content
             """
+            # File name will set open_file() function
             if self.file_name:
                 text_area_text = self.text.get('1.0', 'end-1c')
                 save_text = open(self.file_name, 'w')
@@ -47,7 +48,7 @@ class FileMenu:
             """
             f_save = filedialog.asksaveasfile(mode="w", filetypes=self.file_type,
                                               defaultextension=".txt",
-                                              title="Save")
+                                              title="Save As")
             if f_save is None:
                 return
             text_to_save = str(self.text.get(0.0, END))
@@ -79,9 +80,13 @@ class FileMenu:
                          activeborderwidth=3)
 
         file_menu.add_command(label="New", command="")
-        file_menu.add_command(label="Open", command=open_file)
-        file_menu.add_command(label="Save", command=file_save)
-        file_menu.add_command(label="Save As", command=file_saveas)
+        file_menu.add_command(label="Open", command=open_file, accelerator="Ctrl+O")
+        file_menu.add_command(label="Save", command=file_save, accelerator="Ctrl+S")
+        file_menu.add_command(label="Save As", command=file_saveas, accelerator="Ctrl+Shift+S")
         file_menu.add_separator()
-        file_menu.add_command(label="Exit", command=self.root.destroy)
+        file_menu.add_command(label="Exit", command=self.root.destroy, accelerator="Ctrl+Q")
         self.menu_bar.add_cascade(label="File", menu=file_menu)
+        # you can say key bord short cuts to do work
+        self.root.bind('<Control-o>', lambda event: open_file())
+        self.root.bind('<Control-s>', lambda event: file_save())
+        self.root.bind('<Control-S>', lambda event: file_saveas())

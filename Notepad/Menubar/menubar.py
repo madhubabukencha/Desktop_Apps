@@ -23,6 +23,7 @@ class MenuBar:
         """
         Contains the file menu related functions
         """
+        # Creating instance of FileMenu class
         file_menu_obj = file_menu.FileMenu(self.root, self.text, self.menu_bar)
         file_menu_obj.root_file_menu()
 
